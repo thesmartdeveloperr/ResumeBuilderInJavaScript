@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">By- TheSmartDeveloperr</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" class="form-control" placeholder="Enter Your Name here">
+                </div>
+                <div class="form-group">
+                    <label for="phoneField">Your Phone Number</label>
+                    <input type="text" id="phoneField" class="form-control" placeholder="Enter Your phone here">
+                </div>
+                <div class="form-group">
+                    <label for="addressField">Your address</label>
+                    <textarea type="text" id="addressField" class="form-control" placeholder="Enter Your address here"
+                        rows="3"></textarea>
+                </div>
+
+                <p class="text-secondary">Social Links</p>
+
+                <div class="form-group">
+                    <label for="facebookField">FaceBook Link</label>
+                    <input type="text" id="facebookField" class="form-control"
+                        placeholder="Enter facebook link here"></input>
+                </div>
+                <div class="form-group">
+                    <label for="instaField">Instagram Link</label>
+                    <input type="text" id="instaField" class="form-control"
+                        placeholder="Enter instagram link here"></input>
+                </div>
+                <div class="form-group">
+                    <label for="twitterField">Twitter Link</label>
+                    <input type="text" id="twitterField" class="form-control"
+                        placeholder="Enter twitter link here"></input>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group">
+                    <label for="objectiveField">Objective</label>
+                    <textarea type="text" id="objectiveField" class="form-control"
+                        placeholder="Enter Your career objective here" rows="3"></textarea>
+                </div>
+
+                <div class="form-group" id="we">
+                    <label for="workField">Enter Your Experience</label>
+                    <textarea type="text" class="form-control weField"
+                        placeholder="Enter the Work expereince"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onClick="addNewWEfield()" class="btn btn-primary btn-sm" id="AddButton">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="aq">
+                    <div class="form-group">
+                        <label for="acadField">Your educational qualifications</label>
+                        <textarea type="text" id="eqField" class="form-control"
+                            placeholder="Enter the qualification"></textarea>
+                    </div>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewACqual()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-2">
+                <button class="btn btn-primary btn-lg">Generate Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
