@@ -1,3 +1,17 @@
 /* h1{
     color:orange;
 } */
+/* #cv-form{
+    display:none;
+} */
+.profileImg{
+    border:1px solid red;
+    border-radius: 50%;
+    width:200px;
+}
+.background{
+    background-color: aqua;
+}
+#cv-template{
+    display:none;
+}

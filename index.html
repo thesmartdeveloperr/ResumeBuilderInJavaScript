@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="cv-form">
         <h1 class="text-center my-2">Resume Generator</h1>
         <p class="text-center">By- TheSmartDeveloperr</p>
         <div class="row">
@@ -25,8 +25,8 @@
                     <input type="text" id="nameField" class="form-control" placeholder="Enter Your Name here">
                 </div>
                 <div class="form-group">
-                    <label for="phoneField">Your Phone Number</label>
-                    <input type="text" id="phoneField" class="form-control" placeholder="Enter Your phone here">
+                    <label for="contactField">Your Phone Number</label>
+                    <input type="text" id="contactField" class="form-control" placeholder="Enter Your phone here">
                 </div>
                 <div class="form-group">
                     <label for="addressField">Your address</label>
@@ -37,8 +37,8 @@
                 <p class="text-secondary">Social Links</p>
 
                 <div class="form-group">
-                    <label for="facebookField">FaceBook Link</label>
-                    <input type="text" id="facebookField" class="form-control"
+                    <label for="fbField">FaceBook Link</label>
+                    <input type="text" id="fbField" class="form-control"
                         placeholder="Enter facebook link here"></input>
                 </div>
                 <div class="form-group">
@@ -47,8 +47,8 @@
                         placeholder="Enter instagram link here"></input>
                 </div>
                 <div class="form-group">
-                    <label for="twitterField">Twitter Link</label>
-                    <input type="text" id="twitterField" class="form-control"
+                    <label for="linkedField">LinkedIn Link</label>
+                    <input type="text" id="linkedField" class="form-control"
                         placeholder="Enter twitter link here"></input>
                 </div>
             </div>
@@ -81,7 +81,78 @@
                 </div>
             </div>
             <div class="container text-center mt-2">
-                <button class="btn btn-primary btn-lg">Generate Resume</button>
+                <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- making the resume template -->
+    <div class="container" id="cv-template">
+        <!-- <h1>This is the template</h1> -->
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- first column in resume template -->
+                <img class="img-fluid profileImg" src="http://naikenviro.net/wp-content/uploads/2018/06/null.jpg" alt="default profile picture">
+                <div class="container">
+                    <p id="nameT1">Dhruv Bansal</p>
+                    <p id="contactT">+91-7460816731</p>
+                    <p id="addressT">1/57 Sangat Fatehgarh, Farrukhabad</p>
+                    <hr/>
+                    <p id="fbT">
+                        <a href="#">LinkedIn</a>
+                    </p>
+                    <p id="instaT">
+                        <a href="#">Instagram</a>
+                    </p>
+                    <p id="linkedT">
+                        <a href="#">Twitter</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- second column -->
+                <h1 id="nameT2" class="text-center">The Smart Developerr</h1>
+                <div class="card mt-5">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aut maiores quidem minus corporis accusantium iure provident vitae placeat! Culpa hic voluptate cumque suscipit ut sunt corporis minus neque ratione est doloribus eos nostrum a sapiente id, voluptas libero ex rerum, modi accusamus temporibus. Sit iste dignissimos molestiae. Maiores, veniam.
+                        </p>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="workexperienceT">
+                            <li>Qualifications</li>
+                            <li>Qualifications</li>
+                            <li>Qualifications</li>
+                            <li>Qualifications</li>
+                            <li>Qualifications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header background">
+                        <h3>Educational Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quisquam?</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quisquam?</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quisquam?</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quisquam?</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quisquam?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container text-center mt-2">
+                    <button onClick="downloadResume()" class="btn btn-primary">Download Resume</button>
+                </div>
             </div>
         </div>
     </div>
@@ -91,5 +162,4 @@
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
